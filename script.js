@@ -18,19 +18,6 @@ function defaultUnitPrice() {
 let error_status_live = true;
 let error_status_vod = true;
 
-// 金額変動CSS用
-let elements = document.querySelectorAll('.scrolling-element');
-
-function updateScroll(price) {
-    elements.forEach(function(element, index) {
-        let scrollValue = price > 0 ? 0 : 100;
-        element.style.setProperty('--scroll-value', scrollValue + '%');
-    });
-}
-
-
-
-
 ////////////
 // ベース //
 //////////
@@ -73,7 +60,6 @@ monthlyCost.addEventListener('change', (event) => {
     if(vod_status === true && error_status_live === true && error_status_vod === true){
         footer_error.classList.remove("footer_error");
     }
-    updateScroll(unitPrice_monthlyCost.value);
 });
 
 // 最大登録アカウント数
