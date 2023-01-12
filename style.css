@@ -5,17 +5,20 @@
 
 html{
     font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
 }
 
 @media screen and (min-width: 700px) {
     html {
         font-size: 66%;
+        -webkit-font-smoothing: antialiased;
     }
 }
 
 @media screen and (min-width: 1000px) {
     html {
         font-size: 70%;
+        -webkit-font-smoothing: antialiased;
     }
 }
 
@@ -25,7 +28,6 @@ body{
     margin: 0 auto 40px auto;
     padding-bottom: 60px;
     background-color: #F2F2F2;
-
 }
 
 @media screen and (min-width: 700px) {
