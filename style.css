@@ -9,9 +9,18 @@ html{
 
 body{
     max-width: 375px;
-    font-family: 'Noto Sans JP';
+    font-family: Noto Sans JP;
     margin: 0 auto;
     padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        max-width: 600px;
+        background-color: #F2F2F2;
+        margin: 0 auto;
+
+    }
 }
 
 .header-logo{
@@ -30,6 +39,17 @@ h1{
 .wrapper{
     margin: 0 20px;
 }
+
+@media screen and (min-width: 1000px) {
+    .pcWrapper {
+        background-color: #ffffff;
+        width: 600px;
+        border: solid #E6E6E6 1px;
+        padding: 20px;
+        margin:40px auto;
+    }
+}
+
 
 .status{
     opacity: 50%;
@@ -228,9 +248,3 @@ footer{
 .footer-logo{
     height: 30px;
 }
-
-.scrolling-element {
-    transform: translateY(var(--scroll-value));
-    transition: transform 0.5s;
-}
-
