@@ -50,6 +50,22 @@ body{
     margin: 20px auto 20px auto;
 }
 
+@media screen and (min-width: 700px) {
+    .header-logo {
+    width: 72px;
+    display: block;
+    margin: 20px auto 20px auto;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .header-logo {
+    width: 80px;
+    display: block;
+    margin: 20px auto 20px auto;
+    }
+}
+
 h1{
     font-size: 1.6rem;
     text-align: center;
