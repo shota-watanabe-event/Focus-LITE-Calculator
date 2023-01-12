@@ -152,7 +152,7 @@ h1{
 	font-size: 1.4rem;
 	border-radius: 4px;
 	border: solid 1px #E6E6E6;
-	background-image: url(img/expand_more.svg);
+	background-image: url(expand_more.svg);
 	background-repeat: no-repeat;
 	background-size: 14px 8px;
     background-position: right 10px center;
