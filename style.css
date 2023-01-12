@@ -7,19 +7,25 @@ html{
     font-size: 62.5%;
 }
 
+@media screen and (min-width: 1000px) {
+    html {
+        font-size: 70%;
+    }
+}
+
 body{
     max-width: 375px;
-    font-family: Noto Sans JP;
-    margin: 0 auto;
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0 auto 40px auto;
     padding-bottom: 60px;
+    background-color: #F2F2F2;
+
 }
 
 @media screen and (min-width: 1000px) {
     body {
         max-width: 600px;
-        background-color: #F2F2F2;
-        margin: 0 auto;
-
+        margin: 0 auto 40px auto;
     }
 }
 
@@ -37,15 +43,15 @@ h1{
 }
 
 .wrapper{
-    margin: 0 20px;
+    margin:40px auto;
+    background-color: #ffffff;
+    border: solid #E6E6E6 1px;
+    padding: 10px 20px 0px 20px;
 }
 
 @media screen and (min-width: 1000px) {
-    .pcWrapper {
-        background-color: #ffffff;
+    .wrapper {
         width: 600px;
-        border: solid #E6E6E6 1px;
-        padding: 20px;
         margin:40px auto;
     }
 }
@@ -178,8 +184,21 @@ h1{
     padding: 20px 0 0 0;
 }
 
+.subtotal_vod{
+    font-size: 16px;
+    font-weight: bold;
+    color: #262626;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #E6E6E6;
+    margin: 20px 0px 0px 0px;
+    padding: 20px 0 0 0;
+}
+
+
 .mb{
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .border{
@@ -219,7 +238,7 @@ h1{
 }
 
 .total_price p{
-    padding: 0 20px;
+    padding: 0 10px 0 0;
 }
 
 .total_price_inTax{
@@ -230,7 +249,7 @@ h1{
 }
 
 .total_price_inTax p{
-    padding: 0 20px;
+    padding: 0 0 0 10px;
 }
 
 footer{
