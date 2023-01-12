@@ -14,7 +14,7 @@ html{
 }
 
 body{
-    max-width: 375px;
+    width: 300px;
     font-family: 'Noto Sans JP', sans-serif;
     margin: 0 auto 40px auto;
     padding-bottom: 60px;
@@ -24,7 +24,7 @@ body{
 
 @media screen and (min-width: 1000px) {
     body {
-        max-width: 600px;
+        width: 600px;
         margin: 0 auto 40px auto;
     }
 }
