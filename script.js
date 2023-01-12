@@ -47,7 +47,6 @@ monthlyCost.addEventListener('change', (event) => {
         streamingUse_vod_label.style.fontWeight = "bold";
         footer_error.classList.add("footer_error");
         footer_error.textContent = 'エラー：赤字の項目を見直してください。';
-        error_mb.style.marginBottom = '80px';
         error_status_vod = false;
     } else {
         streamingUse_vod_errorText.hidden = true;
@@ -89,8 +88,6 @@ maxAccount.addEventListener('change', (event) => {
         maxViewing_label.style.fontWeight = "bold";
         footer_error.classList.add("footer_error");
         footer_error.textContent = 'エラー：赤字の項目を見直してください。';
-        error_mb.style.marginBottom = '80px';
-        error_border.style.marginBottom = '80px';
         error_status_live = false;
     } else {
         maxViewing_errorText.hidden = true;
@@ -273,8 +270,6 @@ live_on.addEventListener('click', function() {
         maxViewing_label.style.fontWeight = "bold";
         footer_error.classList.add("footer_error");
         footer_error.textContent = 'エラー：赤字の項目を見直してください。';
-        error_mb.style.marginBottom = '80px';
-        error_border.style.marginBottom = '80px';
         error_status_live = false;
     } else {
         maxViewing_errorText.hidden = true;
@@ -322,8 +317,6 @@ maxViewing.addEventListener('change', (event) => {
         maxViewing_label.style.fontWeight = "bold";
         footer_error.classList.add("footer_error");
         footer_error.textContent = 'エラー：赤字の項目を見直してください。';
-        error_mb.style.marginBottom = '80px';
-        error_border.style.marginBottom = '60px';
         error_status_live = false;
 
         } else {
@@ -334,16 +327,8 @@ maxViewing.addEventListener('change', (event) => {
         error_status_live = true;
     }
 
-    // if(error_status_live === true && error_status_vod === true ){
-    //     footer_error.classList.remove("footer_error");
-    //     error_mb.style.marginBottom = '40px';
-    //     error_border.style.marginBottom = '20px';
-    //     }  
-        
     if(live_status === true && error_status_live === true && error_status_vod === true){
         footer_error.classList.remove("footer_error");
-        error_mb.style.marginBottom = '40px';
-        error_border.style.marginBottom = '20px';
     }
 });
 
@@ -468,8 +453,6 @@ const vodHidden = document.getElementById('vodHidden');
 let vod_status = false;
 
 vod_off.addEventListener('click', function() {
-    error_border.style.marginBottom = '60px';
-
     error_status_vod = true;
     vod_status = false;
     vodHidden.hidden = true;
@@ -487,7 +470,6 @@ vod_off.addEventListener('click', function() {
 
 vod_on.addEventListener('click', function() {
     vod_status = true;
-    error_border.style.marginBottom = '20px';
     vodHidden.hidden = false;  
     reCalc_vod();
 
@@ -501,7 +483,6 @@ vod_on.addEventListener('click', function() {
         streamingUse_vod_label.style.fontWeight = "bold";
         footer_error.classList.add("footer_error");
         footer_error.textContent = 'エラー：赤字の項目を見直してください。';
-        error_mb.style.marginBottom = '80px';
         error_status_vod = false;
     } else {
         streamingUse_vod_errorText.hidden = true;
@@ -555,7 +536,6 @@ streamingUse_vod.addEventListener('change', (event) => {
         streamingUse_vod_label.style.fontWeight = "bold";
         footer_error.classList.add("footer_error");
         footer_error.textContent = 'エラー：赤字の項目を見直してください。';
-        error_mb.style.marginBottom = '80px';
         error_status_vod = false;
     } else {
         streamingUse_vod_errorText.hidden = true;
@@ -567,7 +547,6 @@ streamingUse_vod.addEventListener('change', (event) => {
 
     if(error_status_live === true && error_status_vod === true ){
         footer_error.classList.remove("footer_error");
-        // error_mb.style.marginBottom = '40px';
         }    
         
 });
