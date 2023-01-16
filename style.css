@@ -23,25 +23,9 @@ html{
 }
 
 body{
-    width: 300px;
     font-family: 'Noto Sans JP', sans-serif;
-    margin: 0 auto 40px auto;
-    padding-bottom: 60px;
     background-color: #F2F2F2;
-}
 
-@media screen and (min-width: 700px) {
-    body {
-        width: 450px;
-        margin: 0 auto 40px auto;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    body {
-        width: 600px;
-        margin: 0 auto 40px auto;
-    }
 }
 
 .header-logo{
@@ -74,18 +58,42 @@ h1{
 }
 
 .wrapper{
-    margin:40px auto;
+    background-color: #F2F2F2;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.container{
     background-color: #ffffff;
+    width: 300px;
+    margin: 0 auto 40px auto;
+    padding-bottom: 60px;
+    margin:40px auto;
     border: solid #E6E6E6 1px;
     padding: 10px 20px 0px 20px;
 }
 
+
+@media screen and (min-width: 700px) {
+    .container {
+        width: 450px;
+        margin: 0 auto 40px auto;
+    }
+}
+
 @media screen and (min-width: 1000px) {
-    .wrapper {
+    .container {
+        width: 600px;
+        margin: 40px auto;
+    }
+}
+
+/* @media screen and (min-width: 1000px) {
+    .container {
         width: 600px;
         margin:40px auto;
     }
-}
+} */
 
 
 .status{
@@ -203,6 +211,61 @@ h1{
     background-color: rgba(45,156,251, 6%);
 }
 
+.click_button{
+    width: 20%;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    color: #ffffff;
+    margin: 0 auto 40px auto;
+    border: solid 1px #000000;
+    background-color: rgba(0,0,0);
+}
+
+.click_button:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+.text_box{
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+	padding: 8px 10px;
+	font-size: 1.4rem;
+	border-radius: 4px;
+	border: solid 1px #E6E6E6;
+	background-color: #fff;
+    display: flex;
+    position: relative;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+
+}
+
+.text_box_flex{
+    display: flex;
+    align-items: center;
+
+}
+
+.text_box_hafl{
+    width: 50%;
+}
+
+.text_box_center{
+    margin: 0 10px;
+
+}
 .subtotal{
     font-size: 16px;
     font-weight: bold;
@@ -296,5 +359,18 @@ footer{
 }
 
 .footer-logo{
-    height: 30px;
+    max-width: 40%;
+    max-height: 30px;
+    margin: 0 auto;
 }
+
+.contact{
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto 90px auto;
+}
+
+a {
+    color: #2D9CFB;
+    text-decoration: none;
+    }
