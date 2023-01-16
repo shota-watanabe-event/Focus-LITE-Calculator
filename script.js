@@ -11,7 +11,7 @@ script.onload = () => {
     });
 
     function downloadImage(dataUrl) {
-    const name = 'screenshot.png';
+    const name = 'approximate.png';
     const a = document.createElement('a');
 
     a.href = dataUrl;
