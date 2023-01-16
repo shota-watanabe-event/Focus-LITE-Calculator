@@ -1,5 +1,29 @@
 "use strict";
 
+// PDF保存
+const script = document.createElement('script');
+
+script.onload = () => {
+    document.getElementById('btn-screenshot').addEventListener('click', () => {
+    html2canvas(document.body).then((canvas) => {
+        downloadImage(canvas.toDataURL());
+    });
+    });
+
+    function downloadImage(dataUrl) {
+    const name = 'screenshot.png';
+    const a = document.createElement('a');
+
+    a.href = dataUrl;
+    a.download = name;
+    a.click();
+    }
+};
+
+script.src = 'https://html2canvas.hertzen.com/dist/html2canvas.min.js';
+document.body.appendChild(script);
+
+
 // デフォルト小計・合計
 window.addEventListener("load", defaultUnitPrice);
 function defaultUnitPrice() {
@@ -38,6 +62,7 @@ monthlyCost.addEventListener('change', (event) => {
     const footer_error = document.getElementById('footer_error');
     const error_mb = document.getElementById('error_mb');
 
+
     if(parseInt(monthlyCost.value) < parseInt(streamingUse_vod.value)){
         streamingUse_vod_errorText.hidden = false;
         streamingUse_vod_errorText.style.marginTop = '10px';
@@ -48,6 +73,7 @@ monthlyCost.addEventListener('change', (event) => {
         footer_error.classList.add("footer_error");
         footer_error.textContent = 'エラー：赤字の項目を見直してください。';
         error_status_vod = false;
+
     } else {
         streamingUse_vod_errorText.hidden = true;
         streamingUse_vod.classList.remove("error_select_s");
