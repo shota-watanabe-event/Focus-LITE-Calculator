@@ -11,10 +11,35 @@
 
     <title>Focus LITE by Seed BRAIN 概算シュミレーター</title>
 </head>
+
+
 <body>
 <div class="wrapper">
+    <div class="container">
     <img src="Square-Logo.png" class="header-logo">
     <h1>Focus LITE by Seed BRAIN<br>概算シュミレーター</h1>
+
+        <!-- クライアント情報 -->
+        <h2 class="content_title">基本情報</h2>
+        <div class="content">
+            <label class="content_label">会社名</label>
+            <input type="text" id="name" class="text_box" name="name" required
+                size="14">
+            
+            <label class="content_label">イベントタイトル</label>
+            <input type="text" id="name"  class="text_box" name="name" required
+            size="14">
+            <div>
+                <label class="content_label ">利用予定期間</label>
+                <div class="text_box_flex"> 
+                    <input type="date" id="name"  class="text_box text_box_hafl" name="name" required
+                    size="14">
+                    <p class="text_box_center">-</p>
+                    <input type="date" id="name"  class="text_box text_box_hafl" name="name" required
+                    size="14">
+                </div>
+            </div>
+        </div>
 
         <!-- ラベル -->
         <h2 class="content_title">ベースコスト</h2>
@@ -672,6 +697,15 @@
     </div>
 </div>
 
+<div class="content">
+        <button id="btn-screenshot" class="click_button" checked>保存</button>
+</div>
+
+<div id="contact" class="content  contact">
+    <label class="content_label">お問い合わせは <a href="http://seed-brain.com/contact/" target="_blank">こちら</a></label>
+</div>
+
+
     <!-- 合計 -->
     
     <footer>
@@ -686,10 +720,11 @@
                 <p>in tax</p>
             </div>
         </div>
-        <img src="LITE-Logo-footer.svg" class="footer-logo">
+        <img src="LITE-Logo-footer.png" class="footer-logo">
     </footer>
 
     <script src="script.js"></script>
+    <!-- <script src="scripts/html2canvas.svg.js"></script> -->
 
 </body>
 </html>
