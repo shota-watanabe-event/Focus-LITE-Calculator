@@ -10,17 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
     <title>Focus LITE by Seed BRAIN 概算シュミレーター</title>
+
 </head>
 
 
-<body>
+<body id="body">
 <div class="wrapper">
     <div class="container">
     <img src="Square-Logo.png" class="header-logo">
-    <h1>Focus LITE by Seed BRAIN<br>概算シュミレーター</h1>
+    <h1>Focus LITE by Seed BRAIN<br>概算シミュレーター</h1>
 
         <!-- クライアント情報 -->
-        <h2 class="content_title">基本情報</h2>
+        <h2 class="content_title">基本情報（メモ）</h2>
         <div class="content">
             <label class="content_label">会社名</label>
             <input type="text" id="name" class="text_box" name="name" required
@@ -64,7 +65,7 @@
                     </select>
                     <p>ヶ月</p>
                 </div>
-                <p id="monthlyCost_price">¥ 2,200,000</p>
+                <p id="monthlyCost_price" class="sp_price">¥ 2,200,000</p>
             </div>
         </div>
 
@@ -177,7 +178,7 @@
                     </select>
                     <p>アカウント</p>
                 </div>
-                <p id="maxAccount_price">¥ 550,000</p>
+                <p id="maxAccount_price" class="sp_price">¥ 550,000</p>
             </div>
         </div>
 
@@ -204,7 +205,7 @@
                     </select>
                     <p>アカウント</p>
                 </div>
-                <p id="addHostAccount_price">¥ 0</p>
+                <p id="addHostAccount_price" class="sp_price">¥ 0</p>
             </div>
         </div>
 
@@ -240,7 +241,7 @@
                         <label label for="profile_on" class="select_button_label">ON</label>
                     </div>
                 </div>
-                <p id="profile_price">¥ 0</p>
+                <p id="profile_price" class="sp_price">¥ 0</p>
             </div>
         </div>
 
@@ -258,7 +259,7 @@
                     </select>
                     <p>項目</p>
                 </div>
-                <p id="addProfile_price">¥ 0</p>
+                <p id="addProfile_price" class="sp_price">¥ 0</p>
             </div>
         </div>
 
@@ -276,7 +277,7 @@
                         <label for="mailLimit_on" class="select_button_label">ON</label>
                     </div>
                 </div>
-                <p id="mailLimit_price">¥ 0</p>
+                <p id="mailLimit_price" class="sp_price">¥ 0</p>
             </div>
         </div>
 
@@ -306,7 +307,7 @@
                     <input type="radio" name="login2step" id="login2step_mail_sms"  class="select_button" value="両方">
                     <label for="login2step_mail_sms" class="select_button_label">両方</label>
                 </div>
-                <p id="login2step_price">¥ 0</p>
+                <p id="login2step_price" class="sp_price">¥ 0</p>
             </div>
         </div>
 
@@ -358,7 +359,7 @@
                     </select>
                     <p>配信</p>
                 </div>
-                <p id="newStreamingCreate_live_price">¥ 55,000</p>
+                <p id="newStreamingCreate_live_price" class="sp_price">¥ 55,000</p>
             </div>
         </div>
 
@@ -471,7 +472,7 @@
                     </select>
                     <p>アカウント</p>
                 </div>
-                <p id="maxViewing_price">¥ 0</p>
+                <p id="maxViewing_price" class="sp_price">¥ 0</p>
             </div>
             <p id="maxViewing_errorText" hidden>* 「最大登録アカウント数」を超えています。</p>
         </div>     
@@ -499,7 +500,7 @@
                     </select>
                     <p>日</p>
                 </div>
-                <p id="streamingUse_live_price">¥ 0</p>
+                <p id="streamingUse_live_price" class="sp_price">¥ 0</p>
             </div>
         </div>   
 
@@ -516,7 +517,7 @@
                     <input type="radio" name="select-waterMark-live" id="watermark_live_on"  class="select_button" value="ON">
                     <label for="watermark_live_on" class="select_button_label">ON</label>
                 </div>
-                <p id="watermark_live_price">¥ 0</p>
+                <p id="watermark_live_price" class="sp_price">¥ 0</p>
             </div>
         </div>
 
@@ -530,7 +531,7 @@
                     <input type="radio" name="select-information" id="informationMessage_on"  class="select_button" value="ON">
                     <label for="informationMessage_on" class="select_button_label">ON</label>
                 </div>
-                <p id="informationMessage_price">¥ 0</p>
+                <p id="informationMessage_price" class="sp_price">¥ 0</p>
             </div>
         </div>
 
@@ -545,7 +546,7 @@
                     <input type="radio" name="select_sub-channel" id="subChannel_on"  class="select_button" value="ON">
                     <label for="subChannel_on" class="select_button_label">ON</label>
                 </div>
-                <p id="subChannel_price">¥ 0</p>
+                <p id="subChannel_price" class="sp_price">¥ 0</p>
             </div>
         </div>
 
@@ -561,7 +562,7 @@
                     <input type="radio" name="select-right" id="sparkup_on"  class="select_button" value="ON">
                     <label for="sparkup_on" class="select_button_label">Sparkup</label>
                 </div>
-                <p id="rightArea_price">¥ 0</p>
+                <p id="rightArea_price" class="sp_price">¥ 0</p>
             </div>
         </div>
         <!-- 小計 -->
@@ -612,7 +613,7 @@
                     </select>
                     <p>配信</p>
                 </div>
-                <p id="newStreamingCreate_vod_price" >price</p>
+                <p id="newStreamingCreate_vod_price" class="sp_price">price</p>
             </div>
         </div>
 
@@ -661,7 +662,7 @@
                     </select>
                     <p>ヶ月</p>
                 </div>
-                <p id="streamingUse_vod_price">price</p>
+                <p id="streamingUse_vod_price" class="sp_price">price</p>
             </div>
             <p id="streamingUse_vod_errorText" hidden>* 「利用期間」を超えています。</p>
         </div>
@@ -683,7 +684,7 @@
                         <label for="watermark_vod_on" class="select_button_label">ON</label>
                     </div>
                 </div>
-                <p id="watermark_vod_price">price</p>
+                <p id="watermark_vod_price" class="sp_price">price</p>
             </div>
         </div>
 
@@ -698,11 +699,11 @@
 </div>
 
 <div class="content">
-        <button id="btn-screenshot" class="click_button" checked>保存</button>
+        <button id="btn_screenshot" class="click_button" checked>保存</button>
 </div>
 
 <div id="contact" class="content  contact">
-    <label class="content_label">お問い合わせは <a href="http://seed-brain.com/contact/" target="_blank">こちら</a></label>
+    <label class="content_label error_contact">お問い合わせは <a href="http://seed-brain.com/contact/" target="_blank">こちら</a></label>
 </div>
 
 
@@ -724,7 +725,10 @@
     </footer>
 
     <script src="script.js"></script>
-    <!-- <script src="scripts/html2canvas.svg.js"></script> -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://unpkg.com/canvas-image-compression"></script>
+
 
 </body>
 </html>
