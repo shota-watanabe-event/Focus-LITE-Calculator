@@ -40,6 +40,10 @@ body{
     display: block;
     margin: 20px auto 20px auto;
     }
+    
+    .content_set_price{
+        display: flex;
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -47,6 +51,10 @@ body{
     width: 80px;
     display: block;
     margin: 20px auto 20px auto;
+    }
+
+    .content_set_price{
+        display: flex;
     }
 }
 
@@ -88,14 +96,6 @@ h1{
     }
 }
 
-/* @media screen and (min-width: 1000px) {
-    .container {
-        width: 600px;
-        margin:40px auto;
-    }
-} */
-
-
 .status{
     opacity: 50%;
     pointer-events: none;
@@ -135,7 +135,6 @@ h1{
     color: #ED3669;
 }
 
-
 .content_set{
     display: flex;
     align-items: center;
@@ -146,10 +145,17 @@ h1{
 }
 
 .content_set_price{
-    display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 10px;
+}
+
+.sp_price{
+    margin: 10px 0 40px 0;
+}
+
+.error_sp_price{
+    margin: 10px 0 0 0;
 }
 
 .select_s{
@@ -180,8 +186,6 @@ h1{
 
 .select_button_set {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .select_button {
@@ -292,7 +296,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 
 .mb{
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 
 .border{
@@ -368,6 +372,12 @@ footer{
     text-align: center;
     justify-content: center;
     margin: 0 auto 90px auto;
+}
+
+.error_contact{
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto 130px auto;
 }
 
 a {
