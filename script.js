@@ -669,6 +669,18 @@ function reCalc_total_inTax(){
 
 // PNG保存
 document.getElementById('btn_screenshot_png').addEventListener('click', () => {
+        // selectの矢印を消す
+        monthlyCost.classList.add("no_expand_more");
+        maxAccount.classList.add("no_expand_more");
+        addHostAccount.classList.add("no_expand_more");
+        addProfile.classList.add("no_expand_more");
+        newStreamingCreate_live.classList.add("no_expand_more");
+        maxViewing.classList.add("no_expand_more");
+        streamingUse_live.classList.add("no_expand_more");
+        newStreamingCreate_vod.classList.add("no_expand_more");
+        storageSize.classList.add("no_expand_more");
+        streamingUse_vod.classList.add("no_expand_more");
+
     html2canvas(document.body).then((canvas) => {
         const imgData = canvas.toDataURL('image/png');
         const pdf = new jsPDF('p', 'pt', [canvas.width, canvas.height]);
@@ -680,15 +692,51 @@ document.getElementById('btn_screenshot_png').addEventListener('click', () => {
         link.href = imgData;
         link.click();
     });
+        // selectの矢印を戻す
+        monthlyCost.classList.remove("no_expand_more");
+        maxAccount.classList.remove("no_expand_more");
+        addHostAccount.classList.remove("no_expand_more");
+        addProfile.classList.remove("no_expand_more");
+        newStreamingCreate_live.classList.remove("no_expand_more");
+        maxViewing.classList.remove("no_expand_more");
+        streamingUse_live.classList.remove("no_expand_more");
+        newStreamingCreate_vod.classList.remove("no_expand_more");
+        storageSize.classList.remove("no_expand_more");
+        streamingUse_vod.classList.remove("no_expand_more");
 });
 
 // PDF保存
 document.getElementById('btn_screenshot_pdf').addEventListener('click', () => {
+    // selectの矢印を消す
+    monthlyCost.classList.add("no_expand_more");
+    maxAccount.classList.add("no_expand_more");
+    addHostAccount.classList.add("no_expand_more");
+    addProfile.classList.add("no_expand_more");
+    newStreamingCreate_live.classList.add("no_expand_more");
+    maxViewing.classList.add("no_expand_more");
+    streamingUse_live.classList.add("no_expand_more");
+    newStreamingCreate_vod.classList.add("no_expand_more");
+    storageSize.classList.add("no_expand_more");
+    streamingUse_vod.classList.add("no_expand_more");
+
     html2canvas(document.body).then((canvas) => {
+
         const imgData = canvas.toDataURL('image/png');
         const pdf = new jsPDF('p', 'pt', [canvas.width, canvas.height]);
         pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height, '', 'FAST');
+
         pdf.save("approximate.pdf");
     });
+    // selectの矢印を戻す
+    monthlyCost.classList.remove("no_expand_more");
+    maxAccount.classList.remove("no_expand_more");
+    addHostAccount.classList.remove("no_expand_more");
+    addProfile.classList.remove("no_expand_more");
+    newStreamingCreate_live.classList.remove("no_expand_more");
+    maxViewing.classList.remove("no_expand_more");
+    streamingUse_live.classList.remove("no_expand_more");
+    newStreamingCreate_vod.classList.remove("no_expand_more");
+    storageSize.classList.remove("no_expand_more");
+    streamingUse_vod.classList.remove("no_expand_more");
 });
 
