@@ -1,23 +1,5 @@
 "use strict";
 
-// PDF保存
-document.getElementById('btn_screenshot').addEventListener('click', () => {
-    html2canvas(document.body).then((canvas) => {
-        const imgData = canvas.toDataURL('image/png');
-        const pdf = new jsPDF('p', 'pt', [canvas.width, canvas.height]);
-        pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
-        pdf.save("approximate.pdf");
-
-        // png保存
-        // const link = document.createElement('a');
-        // link.download = 'approximate.png';
-        // link.href = imgData;
-        // link.click();
-    });
-});
-
-
-
 // id list
 const monthlyCost = document.getElementById('monthlyCost');
 const monthlyCost_price = document.getElementById('monthlyCost_price');
@@ -78,6 +60,15 @@ const subtotal_vod_price = document.getElementById('subtotal_vod_price');
 const subtotal_base_price = document.getElementById('subtotal_base_price');
 const liveHidden = document.getElementById('liveHidden');
 const subtotal_live_price = document.getElementById('subtotal_live_price');
+const date = document.getElementById('date');
+
+// 年月日
+let now = new Date();
+let y = now.getFullYear();
+let m = now.getMonth() + 1;
+let d = now.getDate();
+date.innerHTML = y + '年' + m + '月' + d + '日';
+
 
 // デフォルト小計・合計
 window.addEventListener("load", defaultUnitPrice);
@@ -164,6 +155,7 @@ maxAccount.addEventListener('change', (event) => {
 
     unitPrice_maxAccount = maxAccount.value * 110;
     unitPrice_streamingUse_vod = 22 * (storageSize.value * maxAccount.value) * streamingUse_vod.value;
+
     reCalc_base();
     reCalc_vod();   
 
@@ -489,6 +481,7 @@ sparkup_on.addEventListener('click', function() {
 let subtotal_live;
 
 function reCalc_live(){
+    if(live_status ==true){
     newStreamingCreate_live_price.innerHTML = `¥ ${unitPrice_newStreamingCreate_live.toLocaleString()}`;  
     maxViewing_price.innerHTML = `¥ ${unitPrice_maxViewing.toLocaleString()}`;   
     streamingUse_live_price.innerHTML = `¥ ${unitPrice_streamingUse_live.toLocaleString()}`; 
@@ -509,6 +502,7 @@ function reCalc_live(){
 
     reCalc_total();
     reCalc_total_inTax();
+    }
 };  
 
 
@@ -640,6 +634,7 @@ watermark_vod_on.addEventListener('click', function() {
 let subtotal_vod;
 
 function reCalc_vod(){
+    if(vod_status == true){
     newStreamingCreate_vod_price.innerHTML = `¥ ${unitPrice_newStreamingCreate_vod.toLocaleString()}`;  
     streamingUse_vod_price.innerHTML = `¥ ${unitPrice_streamingUse_vod.toLocaleString()}`; 
     watermark_vod_price.innerHTML = `¥ ${unitPrice_watermark_vod.toLocaleString()}`; 
@@ -652,6 +647,7 @@ function reCalc_vod(){
 
     reCalc_total();
     reCalc_total_inTax();
+    }   
 };  
 
 ////////////////
@@ -670,3 +666,29 @@ function reCalc_total_inTax(){
     total_inTax = total * 1.10;
     total_price_inTax.innerHTML = `¥ ${Math.round(total_inTax).toLocaleString()}`; 
 };  
+
+// PNG保存
+document.getElementById('btn_screenshot_png').addEventListener('click', () => {
+    html2canvas(document.body).then((canvas) => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF('p', 'pt', [canvas.width, canvas.height]);
+        pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height, '', 'FAST');
+
+        // png保存
+        const link = document.createElement('a');
+        link.download = 'approximate.png';
+        link.href = imgData;
+        link.click();
+    });
+});
+
+// PDF保存
+document.getElementById('btn_screenshot_pdf').addEventListener('click', () => {
+    html2canvas(document.body).then((canvas) => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF('p', 'pt', [canvas.width, canvas.height]);
+        pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height, '', 'FAST');
+        pdf.save("approximate.pdf");
+    });
+});
+
