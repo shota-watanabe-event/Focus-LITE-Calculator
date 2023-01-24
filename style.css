@@ -75,10 +75,9 @@ h1{
     background-color: #ffffff;
     width: 300px;
     margin: 0 auto 40px auto;
-    padding-bottom: 60px;
     margin:40px auto;
     border: solid #E6E6E6 1px;
-    padding: 10px 20px 0px 20px;
+    padding: 20px;
 }
 
 
@@ -127,6 +126,11 @@ h1{
     font-size: 1.4rem;
     margin-top: 20px;
     color: #262626;
+}
+
+#date{
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .error_content{
@@ -215,24 +219,6 @@ h1{
     background-color: rgba(45,156,251, 6%);
 }
 
-.click_button{
-    width: 20%;
-    height: 40px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    color: #ffffff;
-    margin: 0 auto 40px auto;
-    border: solid 1px #000000;
-    background-color: rgba(0,0,0);
-}
-
-.click_button:hover{
-    background-color: rgba(0,0,0,0.8);
-}
-
 .text_box{
     box-sizing: border-box;
     width: 100%;
@@ -262,7 +248,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 }
 
-.text_box_hafl{
+.text_box_half{
     width: 50%;
 }
 
@@ -384,3 +370,54 @@ a {
     color: #2D9CFB;
     text-decoration: none;
     }
+
+.download{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 300px;
+}
+
+@media screen and (min-width: 700px) {
+    #btn_screenshot_png {
+    display: none;
+    }
+
+    .download{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #btn_screenshot_png {
+        display: none;
+    }
+
+    .download{
+        width: 60%;
+    }
+}
+
+.click_button{
+    width: 40%;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    color: #ffffff;
+    margin: 0 auto 40px auto;
+    border: solid 1px #000000;
+    background-color: rgba(0,0,0);
+}
+
+.click_button img{
+    width: 16px;
+    margin-right: 10px;
+
+}
+
+.click_button:hover{
+    background-color: rgba(0,0,0,0.8);
+}
