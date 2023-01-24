@@ -19,6 +19,7 @@
     <div class="container">
     <img src="Square-Logo.png" class="header-logo">
     <h1>Focus LITE by Seed BRAIN<br>概算シミュレーター</h1>
+    <p id="date" class="content"></p>
 
         <!-- クライアント情報 -->
         <h2 class="content_title">基本情報（メモ）</h2>
@@ -33,10 +34,10 @@
             <div>
                 <label class="content_label ">利用予定期間</label>
                 <div class="text_box_flex"> 
-                    <input type="date" id="name"  class="text_box text_box_hafl" name="name" required
+                    <input type="date" id="name"  class="text_box text_box_half" name="name" required
                     size="14">
                     <p class="text_box_center">-</p>
-                    <input type="date" id="name"  class="text_box text_box_hafl" name="name" required
+                    <input type="date" id="name"  class="text_box text_box_half" name="name" required
                     size="14">
                 </div>
             </div>
@@ -689,7 +690,7 @@
         </div>
 
         <!-- 小計 -->
-        <div id="error_mb" class="mb">
+        <div id="error_mb" >
             <div class="subtotal_vod">
                 <p>小計</p>
                 <p id="subtotal_vod_price">price</p>
@@ -698,8 +699,9 @@
     </div>
 </div>
 
-<div class="content">
-        <button id="btn_screenshot" class="click_button" checked>保存</button>
+<div class="content download">
+    <button id="btn_screenshot_png" class="click_button" checked><img src="download.png" alt="">PNG</button>
+    <button id="btn_screenshot_pdf" class="click_button" checked><img src="download.png" alt="">PDF</button>
 </div>
 
 <div id="contact" class="content  contact">
