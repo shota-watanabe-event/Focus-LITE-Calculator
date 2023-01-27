@@ -306,7 +306,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     color: #fff;
 }
 
-.total{
+.total_blue{
     height: 40px;
     background-color: #2D9CFB;
     font-size: 1.6rem;
@@ -315,6 +315,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
     justify-content: center;
     align-items: center;
     color: #fff;
+}
+
+.total_black{
+    height: 40px;
+    background-color: #000000;
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
 }
 
 .total_price{
@@ -361,13 +372,13 @@ footer{
 .contact{
     text-align: center;
     justify-content: center;
-    margin: 0 auto 90px auto;
+    margin: 0 auto 130px auto;
 }
 
 .error_contact{
     text-align: center;
     justify-content: center;
-    margin: 0 auto 130px auto;
+    margin: 0 auto 170px auto;
 }
 
 a {
