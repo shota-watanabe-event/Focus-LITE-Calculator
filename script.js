@@ -1,11 +1,5 @@
 "use strict";
 
-if (process.env.NODE_ENV !== 'production') {
-  if (module.hot) {
-    module.hot.accept()
-  }
-}
-
 // id list
 const monthlyCost = document.getElementById('monthlyCost');
 const monthlyCost_price = document.getElementById('monthlyCost_price');
@@ -73,7 +67,7 @@ let now = new Date();
 let y = now.getFullYear();
 let m = now.getMonth() + 1;
 let d = now.getDate();
-date.innerHTML = y + '年' + m + '月' + d + '日a';
+date.innerHTML = y + '年' + m + '月' + d + '日';
 
 
 // デフォルト小計・合計
