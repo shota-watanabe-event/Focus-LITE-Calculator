@@ -1,5 +1,11 @@
 "use strict";
 
+if (process.env.NODE_ENV !== 'production') {
+  if (module.hot) {
+    module.hot.accept()
+  }
+}
+
 // id list
 const monthlyCost = document.getElementById('monthlyCost');
 const monthlyCost_price = document.getElementById('monthlyCost_price');
