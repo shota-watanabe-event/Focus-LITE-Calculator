@@ -328,6 +328,28 @@ input[type=date]::-webkit-calendar-picker-indicator {
     color: #ffffff;
 }
 
+.byAccount_pc{
+    display: none;
+}
+
+@media screen and (min-width: 700px) {
+    .byAccount_sp {
+        display: none;
+    }
+    .byAccount_pc{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .byAccount_sp {
+        display: none;
+    }
+    .byAccount_pc{
+        display: block;
+    }
+}
+
 .total_price{
     border-right: 1px solid #fff;
     display: flex;
