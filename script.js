@@ -61,6 +61,9 @@ const subtotal_base_price = document.getElementById('subtotal_base_price');
 const liveHidden = document.getElementById('liveHidden');
 const subtotal_live_price = document.getElementById('subtotal_live_price');
 const date = document.getElementById('date');
+const byAccount_price = document.getElementById('byAccount_price');
+const byAccount_price_inTax = document.getElementById('byAccount_price_inTax');
+
 
 // 年月日
 let now = new Date();
@@ -78,6 +81,8 @@ function defaultUnitPrice() {
     subtotal_vod = 0;
     reCalc_total();
     reCalc_total_inTax();
+    reCalc_total_byAccount();
+    reCalc_total_byAccount_inTax();
 }
 
 // エラーカウント
@@ -306,6 +311,8 @@ function reCalc_base(){
 
     reCalc_total();
     reCalc_total_inTax();
+    reCalc_total_byAccount();
+    reCalc_total_byAccount_inTax();
 };   
 
 ////////////
@@ -322,6 +329,9 @@ live_off.addEventListener('click', function() {
     subtotal_live = 0;
     reCalc_total();
     reCalc_total_inTax();
+    reCalc_total_byAccount();
+    reCalc_total_byAccount_inTax();
+
 
     // エラー表示
     if(error_status_vod === true){
@@ -502,6 +512,8 @@ function reCalc_live(){
 
     reCalc_total();
     reCalc_total_inTax();
+    reCalc_total_byAccount();
+    reCalc_total_byAccount_inTax();
     }
 };  
 
@@ -521,6 +533,8 @@ vod_off.addEventListener('click', function() {
     subtotal_vod = 0;
     reCalc_total();
     reCalc_total_inTax();
+    reCalc_total_byAccount();
+    reCalc_total_byAccount_inTax();
 
     // エラー表示
     if(error_status_live === true){
@@ -624,6 +638,8 @@ watermark_vod_on.addEventListener('click', function() {
     unitPrice_watermark_vod = 55000;
     reCalc_vod();
     reCalc_total();
+    reCalc_total_byAccount();
+    reCalc_total_byAccount_inTax();
 });
 
 
@@ -647,6 +663,8 @@ function reCalc_vod(){
 
     reCalc_total();
     reCalc_total_inTax();
+    reCalc_total_byAccount();
+    reCalc_total_byAccount_inTax();
     }   
 };  
 
@@ -665,6 +683,25 @@ function reCalc_total(){
 function reCalc_total_inTax(){
     total_inTax = total * 1.10;
     total_price_inTax.innerHTML = `¥ ${Math.round(total_inTax).toLocaleString()}`; 
+};  
+
+/////////////////////
+// 一人当たり/////////
+// 一人当たり（税込）//
+///////////////////
+
+
+let byAccount;
+let byAccount_inTax;
+
+function reCalc_total_byAccount(){
+    byAccount = total / maxAccount.value;
+    byAccount_price.innerHTML = `¥ ${Math.round(byAccount).toLocaleString()}`;     
+};  
+
+function reCalc_total_byAccount_inTax(){
+    byAccount_inTax = total_inTax / maxAccount.value;
+    byAccount_price_inTax.innerHTML = `¥ ${Math.round(byAccount_inTax).toLocaleString()}`; 
 };  
 
 // PNG保存
