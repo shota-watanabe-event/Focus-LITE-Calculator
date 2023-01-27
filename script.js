@@ -73,7 +73,7 @@ let now = new Date();
 let y = now.getFullYear();
 let m = now.getMonth() + 1;
 let d = now.getDate();
-date.innerHTML = y + '年' + m + '月' + d + '日';
+date.innerHTML = y + '年' + m + '月' + d + '日a';
 
 
 // デフォルト小計・合計
