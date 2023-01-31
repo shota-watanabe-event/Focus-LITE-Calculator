@@ -1,13 +1,14 @@
 "use strict";
 
-window.addEventListener('devtoolschange', function(e) {
-  if (e.detail.open) {
-    console.log('Developer tools opened.');
+(function() {
+  let originalQuery = window.XMLHttpRequest.prototype.open;
+  window.XMLHttpRequest.prototype.open = function() {
+    console.log('Developer tools detected, refreshing the page.');
     location.reload();
-  } else {
-    console.log('Developer tools closed.');
-  }
-});
+    return originalQuery.apply(this, arguments);
+  };
+})();
+
 
 
 // id list
