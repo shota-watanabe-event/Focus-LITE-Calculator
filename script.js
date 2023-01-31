@@ -1,7 +1,7 @@
 "use strict";
 
 (function() {
-  let originalQuery = window.XMLHttpRequest.prototype.open;
+  var originalQuery = window.XMLHttpRequest.prototype.open;
   window.XMLHttpRequest.prototype.open = function() {
     console.log('Developer tools detected, refreshing the page.');
     location.reload();
