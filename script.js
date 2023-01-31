@@ -1,10 +1,30 @@
 "use strict";
 
-setInterval(function() {
-    if (window.devtools && window.devtools.isOpen) {
-    location.reload();
-    }
-}, 1000);
+window.addEventListener('DOMContentLoaded', function(){
+	var wk = new Worker('./detect.js')
+		,dcnt = 0
+	;
+	wk.onmessage = function(e){
+		if(e.data == 'init'){
+			setInterval(function(){
+				if(navigator.appVersion.indexOf('Chrome') == -1){
+					wk.postMessage(0);
+					debugger;
+				}else{
+					if(dcnt > 0){
+						console.warn('DEBUG CONSOLE DETECTED');
+					}
+					dcnt++;
+					
+				}
+			}, 1000);
+		}else{
+			dcnt = 0;
+			console.clear();
+		}
+	};
+	wk.postMessage('init');
+});
 
 
 // id list
