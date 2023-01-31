@@ -1,5 +1,15 @@
 "use strict";
 
+window.addEventListener('devtoolschange', function(e) {
+  if (e.detail.open) {
+    console.log('Developer tools opened.');
+    location.reload();
+  } else {
+    console.log('Developer tools closed.');
+  }
+});
+
+
 // id list
 const monthlyCost = document.getElementById('monthlyCost');
 const monthlyCost_price = document.getElementById('monthlyCost_price');
