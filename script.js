@@ -1,16 +1,5 @@
 "use strict";
 
-(function() {
-  var originalQuery = window.XMLHttpRequest.prototype.open;
-  window.XMLHttpRequest.prototype.open = function() {
-    console.log('Developer tools detected, refreshing the page.');
-    location.reload();
-    return originalQuery.apply(this, arguments);
-  };
-})();
-
-
-
 // id list
 const monthlyCost = document.getElementById('monthlyCost');
 const monthlyCost_price = document.getElementById('monthlyCost_price');
