@@ -1,5 +1,12 @@
 "use strict";
 
+setInterval(function() {
+    if (window.devtools && window.devtools.isOpen) {
+    location.reload();
+    }
+}, 1000);
+
+
 // id list
 const monthlyCost = document.getElementById('monthlyCost');
 const monthlyCost_price = document.getElementById('monthlyCost_price');
