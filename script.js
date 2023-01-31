@@ -1,30 +1,15 @@
 "use strict";
 
-window.addEventListener('DOMContentLoaded', function(){
-	var wk = new Worker('./detect.js')
-		,dcnt = 0
-	;
-	wk.onmessage = function(e){
-		if(e.data == 'init'){
-			setInterval(function(){
-				if(navigator.appVersion.indexOf('Chrome') == -1){
-					wk.postMessage(0);
-					debugger;
-				}else{
-					if(dcnt > 0){
-						console.warn('DEBUG CONSOLE DETECTED');
-					}
-					dcnt++;
-					
-				}
-			}, 1000);
-		}else{
-			dcnt = 0;
-			console.clear();
-		}
-	};
-	wk.postMessage('init');
+window.addEventListener('devtoolschange', function(e) {
+  if (e.detail.open) {
+    console.log('Developer tools opened.');
+	location.reload();
+
+  } else {
+    console.log('Developer tools closed.');
+  }
 });
+
 
 
 // id list
